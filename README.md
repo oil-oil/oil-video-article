@@ -29,13 +29,6 @@ git clone https://github.com/oil-oil/oil-video-article ~/.agents/skills/oil-vide
 
 agent 会按 `SKILL.md` 的流程执行：读字幕分段 → （工程模式）检查时间轴一致性 → 截配图 → 逐张核对 → 补全可复制的原始命令和链接 → 按 [oil-tone](https://github.com/oil-oil/oil-tone) 的规则成稿 → 输出到 `<视频目录>/公众号文章/`。
 
-## 配套
-
-- [oil-subtitle](https://github.com/oil-oil/oil-subtitle)：转录和字幕烧录，提供本 skill 的字幕语料。
-- [oil-tone](https://github.com/oil-oil/oil-tone)：成稿文风规范和 lint。
-- [screen-studio-editor](https://github.com/oil-oil/screen-studio-editor)：上游剪辑。
-- [dsh-oil-creator](https://github.com/oil-oil/dsh-oil-creator)：DeepSeek Harness 内容工作台，展示本 skill 的产出。
-
 ## License
 
 [MIT](LICENSE)
