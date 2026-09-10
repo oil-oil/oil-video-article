@@ -2,7 +2,7 @@
 
 ![banner](assets/banner.svg)
 
-把一期视频变成一篇公众号 Markdown 文章。这是一个 agent skill（Claude Code / Codex / DeepSeek Harness 等支持 SKILL.md 的 agent 都可以加载）：读字幕理解视频，截取真实画面当配图，逐张核对后按文章结构成稿。只生成文章和图片，不发布。
+将录屏工程或普通视频及其字幕整理为公众号 Markdown 文章，并提取可核对的真实配图。
 
 ## 两种输入
 
@@ -32,3 +32,25 @@ agent 会按 `SKILL.md` 的流程执行：读字幕分段 → （工程模式）
 ## License
 
 [MIT](LICENSE)
+
+## 配置、依赖与使用边界
+
+需要本地视频处理工具、可用字幕材料及 Skill 中指定的 Gemini 入口；文章语气使用 oil-tone。外部模型凭据通过对应工具的配置入口管理。
+
+视频、字幕或抽帧可能发给外部模型。等时长不代表等时间轴；无法证明映射时直接从最终视频取帧。发布文章是独立动作。
+
+使用示例：
+
+```text
+把这个视频整理成公众号文章，配图使用视频中的真实操作画面。
+```
+
+## GitHub 安装
+
+把 [仓库地址](https://github.com/oil-oil/oil-video-article) 交给 Agent，要求按 README 安装；也可运行：
+
+```bash
+npx skills add oil-oil/oil-video-article
+```
+
+安装后由宿主重新加载 Skill。
