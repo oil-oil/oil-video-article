@@ -27,6 +27,7 @@ import argparse
 import json
 import subprocess
 import sys
+import math
 from pathlib import Path
 
 
@@ -50,14 +51,13 @@ def load_segments(project_path: Path):
 
 def map_time(segments, edited_ms):
     """Map edited-timeline ms to (session_index, source_ms)."""
+    if not math.isfinite(edited_ms) or edited_ms < 0:
+        raise ValueError("time must be finite and non-negative")
     for edited_start, session, src_start, src_end, scale in segments:
         edited_dur = (src_end - src_start) / scale
         if edited_start <= edited_ms < edited_start + edited_dur:
             return session, src_start + (edited_ms - edited_start) * scale
-    if segments:
-        edited_start, session, src_start, src_end, scale = segments[-1]
-        return session, src_end
-    raise ValueError("project has no slices")
+    raise ValueError("time is outside the project timeline")
 
 
 def display_track(project_path: Path, session: int) -> Path:
