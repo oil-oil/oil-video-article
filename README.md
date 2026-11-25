@@ -29,6 +29,19 @@ git clone https://github.com/oil-oil/oil-video-article ~/.agents/skills/oil-vide
 
 agent 会按 `SKILL.md` 的流程执行：读字幕分段 → （工程模式）检查时间轴一致性 → 截配图 → 逐张核对 → 补全可复制的原始命令和链接 → 按 [oil-tone](https://github.com/oil-oil/oil-tone) 的规则成稿 → 输出到 `<视频目录>/公众号文章/`。
 
+
+---
+
+<p align="center">
+  <a href="https://studio.oiloil.org/?utm_source=github&utm_medium=readme&utm_campaign=oil-video-article">
+    <img src="https://raw.githubusercontent.com/oil-oil/oil-studio-skill/main/assets/readme/creator-card.png" width="100%" alt="Oil Studio：给自媒体创作者的 Mac 录屏与口播精剪软件">
+  </a>
+</p>
+
+<p align="center">
+  <strong><a href="https://studio.oiloil.org/?utm_source=github&utm_medium=readme&utm_campaign=oil-video-article">录屏、自动缩放、按文字剪口播、加字幕，一个 Mac App 搞定 → 了解 Oil Studio</a></strong>
+</p>
+
 ## License
 
 [MIT](LICENSE)
